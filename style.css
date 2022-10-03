@@ -5,7 +5,7 @@
 
 /* ----------------------------------------------------------------------- */
 body{
-    background-color: #d0edf9;
+    background-color: #c1ccfa;
 }
 header{
     position: fixed;
@@ -19,7 +19,7 @@ header{
     transition: 0.3s;
 }
 .logo{
-    color: #256D85;
+    color: #f7f9fa;
     font-size: 1.8rem;
     font-weight: 600;
     text-decoration:none;
@@ -42,7 +42,7 @@ span{
     list-style: none;
 }
 .navbar a:hover{
-    background-color: #256D85;
+    background-color: #020202;
     color: white;
     border-radius:0.4em;
     transition: 0.2s;
@@ -51,5 +51,42 @@ span{
     font-size: 28px;
     z-index: 10001;
     cursor: pointer;
+    display: none;
 }
+section{
+    padding: 200px 15%;
 
+}
+.home{
+    position: relative;
+    height: 90vh;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 6rem;
+    align-items: center;
+}
+.home-img img{
+    max-width: 100%;
+    width: 250px;
+    height: 290px;
+}
+.home-text h5{
+    color: #030303;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+.home-text h1{
+    font-size:4rem;
+    color:#f6f9fb;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 20px;
+}
+.home-text h6{
+    color: #030608;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
