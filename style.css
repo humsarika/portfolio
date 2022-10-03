@@ -1,0 +1,55 @@
+/* importing google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+
+/* ----------------------------------------------------------------------- */
+body{
+    background-color: #d0edf9;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+.logo{
+    color: #256D85;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-decoration:none;
+}
+span{
+    color:#06283D ;
+}
+.navbar{
+    display: flex;
+
+}
+.navbar a{
+    color: #06283D;
+    font-size: 1.3rem;
+    padding: 9px 30px;
+    font-weight: bold;
+    text-decoration:none;
+}
+.navbar{
+    list-style: none;
+}
+.navbar a:hover{
+    background-color: #256D85;
+    color: white;
+    border-radius:0.4em;
+    transition: 0.2s;
+}
+#menu-icon{
+    font-size: 28px;
+    z-index: 10001;
+    cursor: pointer;
+}
+
