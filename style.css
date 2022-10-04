@@ -5,7 +5,7 @@
 
 /* ----------------------------------------------------------------------- */
 body{
-    background-color: #c1ccfa;
+    background-color: rgb(241, 241, 241);
 }
 header{
     position: fixed;
@@ -19,20 +19,20 @@ header{
     transition: 0.3s;
 }
 .logo{
-    color: #f7f9fa;
+    color:black;
     font-size: 1.8rem;
     font-weight: 600;
     text-decoration:none;
 }
 span{
-    color:#06283D ;
+    color:rgb(15, 61, 62) ;
 }
 .navbar{
     display: flex;
 
 }
 .navbar a{
-    color: #06283D;
+    color: rgb(15, 61, 62);
     font-size: 1.3rem;
     padding: 9px 30px;
     font-weight: bold;
@@ -42,8 +42,8 @@ span{
     list-style: none;
 }
 .navbar a:hover{
-    background-color: #020202;
-    color: white;
+    background-color: rgb(15, 61, 62);
+    color:#f7f9fa;
     border-radius:0.4em;
     transition: 0.2s;
 }
@@ -67,9 +67,10 @@ section{
     align-items: center;
 }
 .home-img img{
-    max-width: 100%;
     width: 250px;
     height: 290px;
+    float: right;
+    padding-bottom: 50px;
 }
 .home-text h5{
     color: #030303;
@@ -79,14 +80,34 @@ section{
 }
 .home-text h1{
     font-size:4rem;
-    color:#f6f9fb;
+    color:rgb(15, 61, 62);
     font-weight: 700;
     line-height: 1;
     margin: 0 0 20px;
 }
 .home-text h6{
-    color: #030608;
+    color:rgb(15, 61, 62);
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 25px;
+}
+h6 span{
+    font-size: 30px;
+    font-weight: bold;
+}
+#downloadBtn{
+    background-color:rgb(15, 61, 62) ;
+    color: #f7f9fa;
+    padding: 12px 30px;
+    border-radius: 0.5em;
+    text-decoration: none;
+}
+#downloadBtn:hover{
+    background-color: #f7f9fa;  
+    color: rgb(15, 61, 62) ;
+    border-color: rgb(15, 61, 62) ; 
+    border-style: solid;
+    border-width: 0.001cm; 
+    border-radius: 0.5em;
+
 }
