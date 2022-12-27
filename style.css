@@ -6,12 +6,13 @@
 /* font-family: 'Poppins', sans-serif; */
 /* ----------------------------------------------------------------------- */
 :root{
-    --bg-black-900:#e2ebed;
-    --bg-black-100:#fdf9ff;
-    --bg-black-50:#e8dfec;
-    --text-black-900:#302e4d;
-    --text-black-700:#504e70;
-    --text-teal-600:#428898;
+    --bg-black-900:#292439;
+    --bg-black-100:#928dc593;
+    --bg-black-50:#d7dce9;
+    --text-black-900:#2a354f;
+    --text-white-700:#d9dbe0;
+    --main-text-color:#feffff;
+    --profession:#7d72bc;
 }
 body{
     margin:0;
@@ -39,10 +40,45 @@ ul{
     min-height: 100vh;
     display: block;
     position: fixed;
+    padding: 0 30px;
     left: 270px;
     top: 0;
     right: 0;
     opacity: 1;
+}
+.padd-15{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin:  auto;
+    /* margin-left: 200px; */
+
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: -15px;
+    position: relative;
+}
+.btn{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    background: var(--bg-black-100);
+    color: white;
+    border-radius: 30px;
+    display: inline-block;
+    border: none;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+.btn:hover{
+    padding:14px 36px;
+    font-size: 17px;
 }
 /* ------------Aside-----------*/
 .aside{
@@ -67,7 +103,7 @@ ul{
     text-transform: capitalize;
 }
 .aside .logo a{
-    color: var(--text-teal-600);
+    color: var(--text-black-900);
     font-weight: 700;
     padding: 15px 20px;
     font-size: 30px;
@@ -84,8 +120,8 @@ ul{
     position: absolute;
     width:30px;
     height: 30px;
-    border-bottom: 5px solid var(--skin-color);
-    border-left: 5px solid var(--skin-color);
+    border-bottom: 5px solid var(--text-black-900);
+    border-left: 5px solid var(--text-black-900);
     bottom:0;
     left: 0;
 }
@@ -94,8 +130,8 @@ ul{
     position: absolute;
     width: 30px;
     height: 30px;
-    border-top: 5px solid var(--skin-color);
-    border-right: 5px solid var(--skin-color);
+    border-top: 5px solid var(--text-black-900);
+    border-right: 5px solid var(--text-black-900);
     top:0;
     right: 0;
 }
@@ -151,11 +187,73 @@ ul{
     display: block;
     border-bottom: 1px solid var(--bg-black-50);
     color: var(--text-black-900);
+    /* text-shadow: -1px -1px 20px #FFFFFF; */
     padding: 5px 15px;
 }
+/* .aside .nav li a:hover{
+    text-shadow: -1px -1px 20px #FFFFFF;
+} */
 .aside .nav li a.active{
-    color:var(--text-teal-600);
+    color:var(--main-text-color);
 }
 .aside .nav li a i{
     margin-right: 15px;
+}
+/* -----------Home------------ */
+.home{
+    min-height: 100vh;
+    display: flex;
+    color: var(--main-text-color);
+}
+.home .home-info{
+    flex:0 0 40%;
+    max-width: 60%;
+    margin-top: 30px;
+    margin-right: 150px;
+}
+h3.hello{
+    font-size: 1.5rem;
+    margin: 15px 0;
+    font-weight: 700 ;
+}
+h3.hello span{
+    font-size: 3rem;
+}
+h3.my-profession{
+    font-size: 30px;
+    margin: 15px 0;
+}
+.typing{
+    color:var(--profession);
+}
+.home .home-img{
+    flex: 0 0 40%;
+    max-width: 40%;
+    /* text-align: center; */
+    position: relative;
+}
+.home .home-img::after{
+    content:'';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-bottom: 10px solid var(--profession);
+    border-right: 10px solid var(--profession);
+    right: 30px;
+    bottom: -20px;
+}
+.home .home-img::before{
+    content:'';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-top: 10px solid var(--profession);
+    border-left: 10px solid var(--profession);
+    top: -50px;
+    left: -60px;
+}
+.home .home-img img{
+    margin: auto;
+    border-radius: 5px;
+    height: 350px;
 }
