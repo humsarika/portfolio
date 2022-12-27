@@ -1,113 +1,161 @@
 /* importing google fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+/* font-family: 'Clicker Script', cursive; */
+/* font-family: 'Poppins', sans-serif; */
 /* ----------------------------------------------------------------------- */
+:root{
+    --bg-black-900:#e2ebed;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50:#e8dfec;
+    --text-black-900:#302e4d;
+    --text-black-700:#504e70;
+    --text-teal-600:#428898;
+}
 body{
-    background-color: rgb(241, 241, 241);
-}
-header{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: 0.3s;
-}
-.logo{
-    color:black;
-    font-size: 1.8rem;
-    font-weight: 600;
-    text-decoration:none;
-}
-span{
-    color:rgb(15, 61, 62) ;
-}
-.navbar{
-    display: flex;
+    margin:0;
+    padding:0;
+    line-height:1.5;
+    font-size:16px;
+    font-family: 'Poppins', sans-serif;;
 
 }
-.navbar a{
-    color: rgb(15, 61, 62);
-    font-size: 1.3rem;
-    padding: 9px 30px;
-    font-weight: bold;
-    text-decoration:none;
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
 }
-.navbar{
+::before,::after{
+    box-sizing: border-box;
+}
+ul{
     list-style: none;
 }
-.navbar a:hover{
-    background-color: rgb(15, 61, 62);
-    color:#f7f9fa;
-    border-radius:0.4em;
-    transition: 0.2s;
+.section{
+    background:var(--bg-black-900) ;
+    min-height: 100vh;
+    display: block;
+    position: fixed;
+    left: 270px;
+    top: 0;
+    right: 0;
+    opacity: 1;
 }
-#menu-icon{
-    font-size: 28px;
-    z-index: 10001;
-    cursor: pointer;
-    display: none;
-}
-section{
-    padding: 200px 15%;
-
-}
-.home{
-    position: relative;
-    height: 90vh;
-    width: 80%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-gap: 6rem;
+/* ------------Aside-----------*/
+.aside{
+    width: 270px;
+    background: var(--bg-black-100);
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px;
+    height: 100%;
+    border-right: 1px solid var(--bg-black-50);
+    display: flex;
+    justify-content: center;
     align-items: center;
-}
-.home-img img{
-    width: 250px;
-    height: 290px;
-    float: right;
-    padding-bottom: 50px;
-}
-.home-text h5{
-    color: #030303;
-    font-size: 25px;
-    font-weight: 500;
-    margin: 0 0 20px;
-}
-.home-text h1{
-    font-size:4rem;
-    color:rgb(15, 61, 62);
-    font-weight: 700;
-    line-height: 1;
-    margin: 0 0 20px;
-}
-.home-text h6{
-    color:rgb(15, 61, 62);
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 25px;
-}
-h6 span{
-    font-size: 30px;
-    font-weight: bold;
-}
-#downloadBtn{
-    background-color:rgb(15, 61, 62) ;
-    color: #f7f9fa;
-    padding: 12px 30px;
-    border-radius: 0.5em;
-    text-decoration: none;
-}
-#downloadBtn:hover{
-    background-color: #f7f9fa;  
-    color: rgb(15, 61, 62) ;
-    border-color: rgb(15, 61, 62) ; 
-    border-style: solid;
-    border-width: 0.001cm; 
-    border-radius: 0.5em;
+    z-index: 10;
 
+}
+.aside .logo{
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.aside .logo a{
+    color: var(--text-teal-600);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: relative;
+}
+.aside .logo a span{
+    font-family: 'Clicker Script', cursive;
+    font-weight: 900;
+    font-size: 40px;
+}
+.aside .logo a::before{
+    content: '';
+    position: absolute;
+    width:30px;
+    height: 30px;
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    bottom:0;
+    left: 0;
+}
+.aside .logo a::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    top:0;
+    right: 0;
+}
+.aside .nav-toggler{
+    height: 40px;
+    width: 45px;
+    border: 1px solid var(--bg-black-50);
+    cursor:pointer;
+    position: fixed;
+    left: 300px;
+    top: 30px;
+    border-radius: 5px;
+    background: var(--bg-black-100);
+    display: none ;
+    align-items: center;
+    justify-content: center;
+}
+.aside .nav-toggler span{
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    display: inline-block;
+    position: relative;
+}
+.aside .nav-toggler span::before{
+    content:'';
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    position: absolute;
+    top: -6px;
+    left: 0;
+}
+.aside .nav-toggler span::after{
+    content:'';
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+.aside .nav{
+    margin-top: 50px;
+}
+.aside .nav li{
+    margin-bottom: 20px;
+}
+.aside .nav li a{
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    border-bottom: 1px solid var(--bg-black-50);
+    color: var(--text-black-900);
+    padding: 5px 15px;
+}
+.aside .nav li a.active{
+    color:var(--text-teal-600);
+}
+.aside .nav li a i{
+    margin-right: 15px;
 }
