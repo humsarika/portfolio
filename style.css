@@ -6,13 +6,12 @@
 /* font-family: 'Poppins', sans-serif; */
 /* ----------------------------------------------------------------------- */
 :root{
-    --bg-black-900:#292439;
-    --bg-black-100:#b7b3e1;
-    --bg-black-50:#d7dce9;
-    --text-black-900:#2a354f;
-    --text-white-700:#d9dbe0;
-    --main-text-color:#feffff;
-    --profession:#887dc8;
+    --color1:#2a354f;
+    --color2:#3b3052;
+    --color3:#a791cb;
+    --color4:#b3a4c8;
+    --color5:#cdc0e4fd;
+    --color6:rgb(195, 179, 210);
 }
 body{
     margin:0;
@@ -36,15 +35,15 @@ ul{
     list-style: none;
 }
 .section{
-    background:var(--bg-black-900) ;
+    background:var(--color1) ;
     min-height: 100vh;
     display: block;
     padding: 0 30px;
     opacity: 1;
 }
-/* .hidden{
+.hidden{
     display: none !important;
-} */
+}
 .main-content{
     padding-left: 270px;
 }
@@ -68,14 +67,15 @@ ul{
 }
 .section-title h2{
     font-size: 50px;
-    color: var(--profession);
+    color: var(--color4);
     margin-top: 50px;
     margin-bottom: 60px;
+    text-shadow: 5px 3px #000000;
 }
 .row{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 100px;
+    margin-left: 50px;
     margin-right: -15px;
     position: relative;
 }
@@ -83,36 +83,40 @@ ul{
     font-size: 16px;
     font-weight: 500;
     padding: 12px 35px;
-    background: var(--bg-black-100);
-    color: white;
+    background: var(--color4);
+    color: rgb(0, 0, 0);
     border-radius: 30px;
+    border: 1px solid #000000;
     display: inline-block;
-    border: none;
     margin-right: 20px;
     white-space: nowrap;
-    transition: all 0.3s ease-in-out;
-}
-.buttons{
+    transition: all 0.3s ease;
     margin-top: 20px;
 }
+/* .buttons{
+    margin-top: 20px;
+} */
 .btn:hover{
     margin-right: 20px;
-    background: #887dc8;
+    box-shadow: 0px 10px 15px 0px rgb(3, 3, 3);
+    border: 1px solid rgb(255, 255, 255);
+    transition: all 0.3s ease;
 }
 /* ------------Aside-----------*/
 .aside{
     width: 270px;
-    background: var(--bg-black-100);
+    background: var(--color4);
     position: fixed;
     left: 0;
     top: 0;
     padding: 30px;
     height: 100%;
-    border-right: 1px solid var(--bg-black-50);
+    box-shadow: 0px 5px 10px 0px rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10;
+    color: var(--color1);
 
 }     
 .aside .logo img{
@@ -128,7 +132,7 @@ ul{
 .aside .nav-toggler{
     height: 40px;
     width: 45px;
-    border: 1px solid var(--bg-black-50);
+    border: 1px solid var(--color4);
     cursor:pointer;
     position: fixed;
     left: 300px;
@@ -150,7 +154,7 @@ ul{
     content:'';
     height: 2px;
     width: 18px;
-    background: var(--skin-color);
+    background: white;
     position: absolute;
     top: -6px;
     left: 0;
@@ -159,7 +163,7 @@ ul{
     content:'';
     height: 2px;
     width: 18px;
-    background: var(--skin-color);
+    background: white;
     position: absolute;
     top: 6px;
     left: 0;
@@ -175,7 +179,7 @@ ul{
     font-size: 16px;
     font-weight: 600;
     display: block;
-    border-bottom: 1px solid var(--bg-black-50);
+    border-bottom: 1px solid #d2c8df;
     color: var(--text-black-900);
     /* text-shadow: -1px -1px 20px #FFFFFF; */
     padding: 5px 15px;
@@ -184,7 +188,7 @@ ul{
     text-shadow: -1px -1px 20px #FFFFFF;
 } */
 .aside .nav li a.active{
-    color:var(--main-text-color);
+    color:white;
 }
 .aside .nav li a i{
     margin-right: 15px;
@@ -193,7 +197,7 @@ ul{
 .home{
     min-height: 100vh;
     display: flex;
-    color: var(--main-text-color);
+    color: white;
 }
 .home .home-info{
     flex:0 0 40%;
@@ -216,12 +220,11 @@ h3.my-profession{
     margin: 15px 0;
 }
 .typing{
-    color:var(--profession);
+    color:var(--color3);
 }
 .home .home-img{
     flex: 0 0 40%;
     max-width: 40%;
-    /* text-align: center; */
     position: relative;
 }
 .home .home-img::after{
@@ -229,8 +232,8 @@ h3.my-profession{
     position: absolute;
     height: 80px;
     width: 80px;
-    border-bottom: 10px solid var(--profession);
-    border-right: 10px solid var(--profession);
+    border-bottom: 10px solid var(--color3);
+    border-right: 10px solid var(--color3);
     right: 30px;
     bottom: -20px;
 }
@@ -239,8 +242,8 @@ h3.my-profession{
     position: absolute;
     height: 80px;
     width: 80px;
-    border-top: 10px solid var(--profession);
-    border-left: 10px solid var(--profession);
+    border-top: 10px solid var(--color3);
+    border-left: 10px solid var(--color3);
     top: -50px;
     left: -60px;
 }
@@ -262,10 +265,39 @@ h3.my-profession{
 }
 .about-content pre{
     opacity: 0.1;
-    color: rgba(255, 255, 255, 0.408);
+    color: rgba(234, 229, 244, 0.468);
     font-size: 18rem;
     /* z-index: 1; */
     display:block;
     position: absolute;
     
+}
+
+/* -------Projects------- */
+.project .project-item{
+    margin-bottom: 30px;
+    flex: 0 0 30.33%;
+    max-width: 28%;
+    margin-right: 30px;
+}
+.project .project-item .project-item-inner{
+    background-color: var(--color6);
+    /* box-shadow: 0px 5px 15px 0px rgb(3, 3, 3); */
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 70px 0px;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+a .icon i{
+    text-decoration: none;
+    color: black;
+    margin-top: 15px;
+}
+.project .project-item .project-item-inner:hover{
+    box-shadow: 0px 10px 15px 0px rgb(3, 3, 3);
+    border: 2px solid rgb(255, 255, 255);
+    cursor: pointer;
 }
