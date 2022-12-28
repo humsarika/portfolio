@@ -7,12 +7,12 @@
 /* ----------------------------------------------------------------------- */
 :root{
     --bg-black-900:#292439;
-    --bg-black-100:#928dc593;
+    --bg-black-100:#b7b3e1;
     --bg-black-50:#d7dce9;
     --text-black-900:#2a354f;
     --text-white-700:#d9dbe0;
     --main-text-color:#feffff;
-    --profession:#7d72bc;
+    --profession:#887dc8;
 }
 body{
     margin:0;
@@ -39,23 +39,38 @@ ul{
     background:var(--bg-black-900) ;
     min-height: 100vh;
     display: block;
-    position: fixed;
     padding: 0 30px;
-    left: 270px;
-    top: 0;
-    right: 0;
     opacity: 1;
+}
+/* .hidden{
+    display: none !important;
+} */
+.main-content{
+    padding-left: 270px;
 }
 .padd-15{
     padding-left: 15px;
     padding-right: 15px;
 }
 .container{
-    max-width: 1200px;
+    max-width: 1100px;
     width: 100%;
     margin:  auto;
     /* margin-left: 200px; */
-
+}
+.section .container{
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+.section-title{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.section-title h2{
+    font-size: 50px;
+    color: var(--profession);
+    margin-top: 50px;
+    margin-bottom: 60px;
 }
 .row{
     display: flex;
@@ -73,12 +88,16 @@ ul{
     border-radius: 30px;
     display: inline-block;
     border: none;
+    margin-right: 20px;
     white-space: nowrap;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
+}
+.buttons{
+    margin-top: 20px;
 }
 .btn:hover{
-    padding:14px 36px;
-    font-size: 17px;
+    margin-right: 20px;
+    background: #887dc8;
 }
 /* ------------Aside-----------*/
 .aside{
@@ -95,46 +114,17 @@ ul{
     align-items: center;
     z-index: 10;
 
+}     
+.aside .logo img{
+    position: fixed;
+    margin-top: 50px;
+    width: 80px;
+    height: 80px;
+    top: 0;
+    left: 80px;
+    
 }
-.aside .logo{
-    position: absolute;
-    top: 50px;
-    font-size: 30px;
-    text-transform: capitalize;
-}
-.aside .logo a{
-    color: var(--text-black-900);
-    font-weight: 700;
-    padding: 15px 20px;
-    font-size: 30px;
-    letter-spacing: 5px;
-    position: relative;
-}
-.aside .logo a span{
-    font-family: 'Clicker Script', cursive;
-    font-weight: 900;
-    font-size: 40px;
-}
-.aside .logo a::before{
-    content: '';
-    position: absolute;
-    width:30px;
-    height: 30px;
-    border-bottom: 5px solid var(--text-black-900);
-    border-left: 5px solid var(--text-black-900);
-    bottom:0;
-    left: 0;
-}
-.aside .logo a::after{
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-top: 5px solid var(--text-black-900);
-    border-right: 5px solid var(--text-black-900);
-    top:0;
-    right: 0;
-}
+
 .aside .nav-toggler{
     height: 40px;
     width: 45px;
@@ -209,6 +199,8 @@ ul{
     flex:0 0 40%;
     max-width: 60%;
     margin-top: 30px;
+    align-items: center;
+    justify-content: center;
     margin-right: 150px;
 }
 h3.hello{
@@ -256,4 +248,24 @@ h3.my-profession{
     margin: auto;
     border-radius: 5px;
     height: 350px;
+}
+/* -----------About---------- */
+.about .about-content{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.about-content p{
+    font-size: 30px;
+    color: white;
+    margin-top: 60px;
+    justify-content: space-around;
+}
+.about-content pre{
+    opacity: 0.1;
+    color: rgba(255, 255, 255, 0.408);
+    font-size: 18rem;
+    /* z-index: 1; */
+    display:block;
+    position: absolute;
+    
 }
