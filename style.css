@@ -6,11 +6,11 @@
 /* font-family: 'Poppins', sans-serif; */
 /* ----------------------------------------------------------------------- */
 :root{
-    --color1:#898AA6;
+    --color1:#382d4f;
     --color3:#C9BBCF;
-    --color4:#C9BBCF;
+    --color4:#8b8096;
     --color5:#D6EFED;
-    --color6:#C9BBCF;
+    --color6:#8b8096;
 }
 body{
     margin:0;
@@ -19,6 +19,10 @@ body{
     font-size:16px;
     font-family: 'Poppins', sans-serif;;
 
+}
+::selection{
+    background-color:rgb(180, 165, 193);
+    color: black;;
 }
 *{
     margin: 0;
@@ -63,6 +67,7 @@ ul{
 .section-title{
     flex: 0 0 100%;
     max-width: 100%;
+    /* text-align: center; */
 }
 .section-title h2{
     font-size: 50px;
@@ -116,6 +121,7 @@ ul{
     align-items: center;
     z-index: 10;
     color: var(--color1);
+    /* display: none; */
 
 }     
 .aside .logo img{
@@ -299,4 +305,68 @@ a .icon i{
     box-shadow: 0px 10px 15px 0px rgb(3, 3, 3);
     border: 2px solid rgb(255, 255, 255);
     cursor: pointer;
+}
+
+/* ---------------------contact us styling ------------------- */
+.contact-sub-title{
+    color: var(--color6);
+    text-align: center;
+    font-size: 15px;
+    text-shadow: 3px 1px #000000;
+
+}
+
+.contact .contact-info-item
+{
+    text-align: center;
+    font-size: 12px;
+    flex: 0 0 25%;
+    max-width: 100%;
+    padding-top: 12px;
+    padding-left: 40;
+    color: var(--color6);
+    
+}
+.contact-info-item .icon i{
+    padding-bottom: 5px;
+}
+.row .contact-info-item:nth-child(1){
+    margin-left: 8%;
+}
+
+.form-container{
+    padding: 1rem;
+    width: 50%;
+    margin:auto;
+}
+
+.form-container input{
+    display: block;
+    width: 100%;
+    border: 2px solid #050505;
+    border-radius: 5px;
+    padding: 0.5rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 500;
+}
+
+.form-container textarea{
+    display: block;
+    width: 100%;
+    border: 2px solid #050505;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 500;
+}
+
+.form-container ::placeholder{
+    font-size: 13px;
+    padding-left: 3px;
 }
