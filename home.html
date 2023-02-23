@@ -3,15 +3,18 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" > -->
         <title>sarika</title>
-        <meta name="description" content="">
+        <!-- <meta name="description" content=""> -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel = "stylesheet" href="./style.css">
-        <link rel = "stylesheet" href="./color-1.css">
+        <link rel="stylesheet" href="./style.css">
         <link rel = "icon" href="./img/logo2.png">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
     </head>
+
     <body>
         <!------- Main Container start------ -->
         <div class="main-container">
@@ -24,11 +27,11 @@
                     <span></span>
                 </div>
                 <ul class="nav">
-                    <li><a href="#" class="active"><i class="fa fa-home"></i>Home</a></li>
-                    <li><a href="#"><i class="fa fa-user"></i>About</a></li>
-                    <li><a href="#"><i class="fa fa-list"></i>Projects</a></li>
-                    <li><a href="#"><i class="fa fa-briefcase"></i>Skills</a></li>
-                    <li><a href="#"><i class="fa fa-comment"></i>Contact</a></li>
+                    <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
+                    <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
+                    <li><a href="#projects"><i class="fa fa-list"></i>Projects</a></li>
+                    <li><a href="#skills"><i class="fa fa-briefcase"></i>Skills</a></li>
+                    <li><a href="#contact"><i class="fa fa-comment"></i>Contact</a></li>
                 </ul>
             </div>
             <!-- -------------Aside End -------------- -->
@@ -143,12 +146,22 @@
                             </div>
                         </div>
                         <div class="contact-container container">
-                            <div class="form-container">
-                                <input type="text"  id="input" placeholder="Name">
-                                <input type="email"  id="input" placeholder="your@email.com">
-                                <textarea id="textarea" cols="30" rows="6" placeholder="Type your message here ..."></textarea>
-                                <a href="#" id="submit" class="btn btn-primary">Submit</a>
-                            </div>
+                            <form class="form-container" method="POST"   
+                            action="mailto: javatpoint@gmail.com? Subject= Feedback/ Suggestion ?"   
+                            enctype="multipart/form-data">
+                                <input type="text"  placeholder="Full Name ">
+                                <input type="email"  placeholder="Email">
+                                <textarea  cols="30" rows="10" name = "Message" placeholder="Type your message ...."></textarea>
+                                <button type="submit" target = "_blank">Send</button>
+                          
+                          
+                                <!--<input type="color" name="" value=""><br><br>
+                                <label>Password:</label>
+                                <input type="password" name="" value=""><br><br>
+                                <label>Do you want to sign up to the email list?</label>
+                                <input type="checkbox" name="" id=""> -->
+                               
+                            </form>
                         </div>
                         <!-- <h3 class="section-title">Have you any questions ?</h3> -->
                         <h4 class="contact-sub-title">Contact Me</h4><hr color = "black">
@@ -184,6 +197,7 @@
 
         </div>
        
+
 
     </body>
 </html>
